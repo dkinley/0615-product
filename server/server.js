@@ -8,6 +8,8 @@ app.use(express.urlencoded( { extended : true} ) );
 app.use(cors());
 
 // setup mongodb
+require('./config/mongoose.config');
 // setup routes
+require('./routes/product.routes')(app);
 
 app.listen(port, () => console.log("Listening on port:  " + port));
