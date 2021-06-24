@@ -3,9 +3,10 @@ const Product = require('../models/product.model')
 module.exports = {
 
     getAll: (req, res) => {  // the getAll is the key, the value is the entire anonymous object
-        Product.find() //this is going to use the model connection to the db
+        var mysort = { title: 1 };
+        Product.find().sort(mysort) //this is going to use the model connection to the db
                         // 'find' returns an array by default 
-            .then((allProducts) => {
+                .then((allProducts) => {
                 console.log(allProducts);
                 res.json(allProducts); // this is the return from the route
             })

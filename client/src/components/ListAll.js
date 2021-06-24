@@ -32,7 +32,7 @@ const ListAll = (props) => {
                                 <Link to={ `/product/${product._id}`} >{product.title} </Link>
                             </td>
                             <td>
-                                <DeleteButton id={ product._id }/>
+                                <DeleteButton id={ product._id } allProducts={allProducts} setAllProducts={setAllProducts}/>
                             </td>
                     </tr>
                         ))

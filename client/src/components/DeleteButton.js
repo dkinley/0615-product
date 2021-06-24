@@ -8,7 +8,7 @@ const DeleteButton = (props) => {
         axios.delete(`http://localhost:8000/api/product/${ productID }`)
             .then((res) => {
                 console.log(res.data);
-                // in example we saw setAllSongs(allSongs.filter((songElement) => songElement._id !== songID))
+                props.allProducts && props.setAllProducts(props.allProducts.filter((product) => product._id !== productID))
                 navigate('/product');
             })
             .catch((err) => {

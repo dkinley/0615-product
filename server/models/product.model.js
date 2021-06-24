@@ -5,6 +5,7 @@ const ProductSchema = new mongoose.Schema({
         type: String,  //this is the validation for a product
         required: [ true, "You must have a title for a product"],  //true - this is a required field, the 2nd part is the requirement
         minlength: [5, "The product title must be at least 5 characters long"],
+        unique: [true, "Title must be unique"],
     },
 
     price: {

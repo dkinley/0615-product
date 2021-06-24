@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
     <Router>
+      <ListAll path="/" />
       <ListAll path="/product" />
       <NewProduct path="/product/new" />
       <Edit path="/product/:id/edit" />
