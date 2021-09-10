@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link, navigate } from '@reach/router';
 import axios from 'axios';
 
 const NewProduct = (props) => {
@@ -23,6 +24,7 @@ const NewProduct = (props) => {
                 }
                 else {
                     console.log(res.data);
+                    navigate("/product");
                 }
             })
             .catch((err) => {
